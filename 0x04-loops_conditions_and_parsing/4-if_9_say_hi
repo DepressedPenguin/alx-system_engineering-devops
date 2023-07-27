@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-# Show "Best School" 10 times then Hi in 9th
+# Show "Best School" 10 times in 9th print Hi
 i=0
 while ((i < 10 )); do
+  echo "Best School"
   if ((i == 8)); then
     echo "Hi"
   fi
-  echo "Best School";
   ((i++))
 done
-
