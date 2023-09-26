@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
 #Run Apache2 and display Hello holberton
+echo "Hello Holberton" > /var/www/html/index.html
 service apache2 start
 sudo service apache2 status
