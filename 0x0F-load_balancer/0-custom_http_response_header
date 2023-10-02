@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #MAKE INSTALL NGINGX (WEB-2) AND CHECK STATE
 
-#sudo apt-get -y update
-#sudo apt-get -y install nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
 
 
 #SEND GUSTOM HEADER REQUEST
