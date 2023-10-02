@@ -6,9 +6,7 @@ sudo apt-get -y install nginx
 
 
 #SEND GUSTOM HEADER REQUEST
+sed -i "/listen 80 default_server/a \\\tadd_header X-Served-By $(hostname);" /etc/nginx/sites-available/default
 
-header_con="add_header X-Served-By \$hostname;"
-
-sudo sed -i "/http {/a $header_con" /etc/nginx/nginx.conf
 
 sudo systemctl restart nginx
