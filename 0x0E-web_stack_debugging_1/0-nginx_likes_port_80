@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+# apt-get update
+# sudo apt-get install inginx-y
+
+
+# Check nginx if running
+
+sudo systemctl start nginx
+sudo systemctl enable nginx
+
+
+# Restart nginx
+sudo service nginx restart
