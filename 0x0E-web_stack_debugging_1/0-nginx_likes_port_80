@@ -1,8 +1,8 @@
 #!/bin/bash
 
-
-# apt-get update
-# sudo apt-get install inginx-y
+#Check if nginx install
+sudo apt-get update
+sudo apt-get install nginx -y
 
 
 # Check nginx if running
