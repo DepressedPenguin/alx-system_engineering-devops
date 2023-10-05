@@ -6,7 +6,7 @@ sudo apt-get install nginx -y
 
 
 # Check nginx if running
-
+sudo sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
