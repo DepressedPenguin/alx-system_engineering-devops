@@ -4,9 +4,9 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 
-# Check nginx if running
+#Check nginx if running
 sudo sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
 sudo service nginx start
 
-# Restart nginx
+#Restart nginx
 sudo service nginx restart
