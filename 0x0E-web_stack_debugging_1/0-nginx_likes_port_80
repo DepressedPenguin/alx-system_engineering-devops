@@ -1,15 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #Check if nginx install
 sudo apt-get update
-sudo apt-get install nginx -y
-
+sudo apt-get -y install nginx
 
 # Check nginx if running
 sudo sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
-sudo systemctl start nginx
-sudo systemctl enable nginx
-
+sudo service nginx start
 
 # Restart nginx
 sudo service nginx restart
