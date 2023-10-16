@@ -1,0 +1,22 @@
+#!/bin/bash/
+
+# install ufw if not installed
+sudo apt-get update
+sudo apt-get install ufw
+
+# rest any existing rules (res)
+sudo ufw --force reset
+
+# allow and ongoing and block any incoiming
+sudo ufw enabled
+
+# set rules and alow ssh,http,and https
+sudo ufw allow 22/tcp
+sudo ufw allow 243/tcp
+sudo ufw allow 80/tcp
+
+# enable ufw (active)
+sudo ufw enable
+
+# check if everything is good -_-
+sudo ufw status
