@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-
+"""Task 0"""
 import requests
 import sys
 
 def fetch_employee_data(employee_id):
+    """function to fetch data"""
     employee_url = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
     employee_response = requests.get(employee_url)
     employee_data = employee_response.json()
