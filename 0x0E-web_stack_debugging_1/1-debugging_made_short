@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#fix problem port 80 task 1
+sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
+service nginx restart
+pkill -o nginx

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# custom header  web-01 and web-02
+sudo apt-get update
+sudo apt-get install nginx -y
+server_hostname=$(hostname)
+echo "server {
+        listen 80;
+        server_name _;
+        
+        location /  {
+                #Autorisez la méthode GET
+                add_header X-Served-By $server_hostname; # Si vous avez besoin de CORS
+                #proxy_pass http://votre_application_backend; # Remplacez par l'adresse de votre backend
+        }
+        }
+"> /etc/nginx/sites-available/default
+sudo nginx -t
+sudo service nginx restart
